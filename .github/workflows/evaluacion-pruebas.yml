@@ -52,8 +52,8 @@ jobs:
         REPO=$(basename "$GITHUB_REPOSITORY")
         ARCHIVO="$USUARIO-$REPO.txt"
 
-        echo "👤 Estudiante: $nombre" > "$ARCHIVO"
-        echo "✉️ Correo: $correo" >> "$ARCHIVO"
+        echo "👤 Estudiante: $Michael Yumbla" > "$ARCHIVO"
+        echo "✉️ Correo: $myumblap@est.ups.edu.ec" >> "$ARCHIVO"
         echo "❌ Error: No se pudo compilar el código" >> "$ARCHIVO"
         echo "📊 Nota final: 0 / 10" >> "$ARCHIVO"
 
