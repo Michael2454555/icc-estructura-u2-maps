@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import controllers.Ejercicios;
 import controllers.EmpleadoContoller;
 import controllers.EmpleadoDAOHashMap;
@@ -14,6 +16,7 @@ public class App {
         // Ejecuta el ejemplo de uso de HashMap con ejemplos sencillos
         runMapExamlpe();
         runEmpleadoExample();
+        runEjerccios();
 
         // // Ejecuta el ejemplo de gestión de empleados usando HashMap
         // runEmpleadoExample();
@@ -71,7 +74,28 @@ public class App {
     }
 
     private static void runEjerccios() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        Ejercicios ejercicios = new Ejercicios();
+        
+        // Prueba de areAnagrams
+        System.out.println("=== Prueba de anagramas ===");
+        System.out.println("listen y silent: " + Ejercicios.areAnagrams("listen", "silent")); // true
+        System.out.println("hello y bello: " + Ejercicios.areAnagrams("hello", "bello")); // false
+        
+        // Prueba de sumatoriaDeDos
+        System.out.println("\n=== Prueba de sumatoriaDeDos ===");
+        int[] nums = {9, 2, 3, 6};
+        int[] resultado = ejercicios.sumatoriaDeDos(nums, 5);
+        System.out.println("Indices para objetivo 5: " + 
+                          (resultado != null ? Arrays.toString(resultado) : "null")); // [1, 2]
+        
+        // Prueba de contarCaracteres
+        System.out.println("\n=== Prueba de contarCaracteres ===");
+        ejercicios.contarCaracteres("hola mundo"); // {h=1, o=2, l=1, a=1,  =1, m=1, u=1, n=1, d=1}
+        
+        // Prueba de sonAnagramas
+        System.out.println("\n=== Prueba de sonAnagramas ===");
+        System.out.println("roma y amor: " + ejercicios.sonAnagramas("roma", "amor")); // true
+        System.out.println("java y vaja: " + ejercicios.sonAnagramas("java", "vaja")); // true
 
     }
 }
